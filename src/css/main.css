@@ -1,0 +1,21 @@
+@import "tailwindcss" theme(static);
+@source "../../**/*.{php,html,js,ts,jsx,tsx}";
+@source not "../../node_modules/**/";
+@source not "../../assets/build/**/";
+
+body {
+    @apply text-text p-16;
+}
+
+@theme {
+    --color-*: initial;
+    --color-white-pure: #fff;
+    --color-white: #fafafa;
+    --color-black-pure: #000;
+    --color-black: #222;
+
+    --color-accent: #007acc;
+
+    --color-border: #ddd;
+    --color-text: #444;
+}
