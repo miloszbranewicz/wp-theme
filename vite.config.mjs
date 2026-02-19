@@ -21,7 +21,7 @@ export default defineConfig({
                 path.resolve(__dirname, 'src/js/editor.js'),
             ],
             publicDirectory: path.resolve(__dirname, 'assets'),
-            refresh: true
+            refresh: [{ paths: ['**/*.php'], config: { delay: 300 } }],
         }),
 
         wordpressThemeJson({

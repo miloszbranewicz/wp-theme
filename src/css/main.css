@@ -1,10 +1,10 @@
 @import "tailwindcss" theme(static);
-@source "../../**/*.{php,html,js,ts,jsx,tsx}";
-@source not "../../node_modules/**/";
-@source not "../../assets/build/**/";
+@source "/**/*.{php,html,js,ts,jsx,tsx}";
+@source not "/node_modules/**/";
+@source not "/assets/build/**/";
 
 body {
-    @apply text-text p-16;
+    @apply text-text p-16 ;
 }
 
 @theme {

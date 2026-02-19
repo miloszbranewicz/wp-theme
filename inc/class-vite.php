@@ -141,12 +141,16 @@ final class Vite
             if (str_ends_with($entry, '.js')) {
                 wp_enqueue_script_module(
                     "{$prefix}-" . md5($entry),
-                    "{$server}/" . ltrim($entry, '/')
+                    "{$server}/" . ltrim($entry, '/'),
+                    ['jquery'],
+                    false
                 );
             } elseif (str_ends_with($entry, '.css')) {
                 wp_enqueue_style(
                     "{$prefix}-" . md5($entry),
-                    "{$server}/" . ltrim($entry, '/')
+                    "{$server}/" . ltrim($entry, '/'),
+                    [],
+                    false
                 );
             }
         }
@@ -173,7 +177,7 @@ final class Vite
                 wp_enqueue_script(
                     "{$prefix}-" . md5($chunk['file']),
                     get_template_directory_uri() . '/' . self::BUILD_DIR . $chunk['file'],
-                    [],
+                    ['jquery'],
                     null,
                     true
                 );
